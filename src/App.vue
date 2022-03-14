@@ -1,11 +1,14 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
   <TheNavigation />
+  <GoBack />
+
   <router-view></router-view>
 </template>
 
 <script setup>
 import TheNavigation from "./components/TheNavigation.vue";
+import GoBack from "@/components/GoBack.vue";
 </script>
 
 <style>
