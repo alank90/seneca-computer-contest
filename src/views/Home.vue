@@ -1,10 +1,17 @@
 <template>
   <div class="home">
-    <h1>Home View</h1>
-    <HelloWorld msg="Hello Vue 3 + Vite" />
+    <h1>Scarsdale Computer Club</h1>
+    <img
+      class="pure-img"
+      alt="Sienna logo"
+      src="@/assets/images/siena-logo-cs-white.png"
+    />
+    <h2>High School Programming Contest</h2>
   </div>
 </template>
 
-<script setup>
-import HelloWorld from "../../src/components/HelloWorld.vue";
-</script>
+<style scoped>
+img[alt="Sienna logo"] {
+  margin: 0 auto;
+}
+</style>
