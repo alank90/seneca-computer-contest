@@ -36,7 +36,7 @@ body {
   font-size: 13px;
   background-image: url("@/assets/images/keyboard_programming.jpg");
   background-repeat: no-repeat;
-  background-size: ;
+  background-size: cover;
 }
 
 h1,
