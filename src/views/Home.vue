@@ -11,6 +11,11 @@
 </template>
 
 <style scoped>
+h1,
+h2 {
+  color: var(--sienna-yellow);
+  font-family: var(--noto);
+}
 img[alt="Sienna logo"] {
   margin: 0 auto;
 }

@@ -28,7 +28,8 @@
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 .home-menu {
-  background: #a2ded0;
+  background: var(--nav-bg);
+  font-family: var(--noto);
 }
 .pure-menu.pure-menu-fixed {
   /* Fixed menus normally have a border at the bottom. */
@@ -37,17 +38,19 @@
   z-index: 4;
 }
 
-.pure-menu-link {
-  font-size:1.2rem;
-}
-
 .pure-menu-list {
   position: absolute;
   right: 0;
 }
 
-.home-menu .pure-menu-link {
-  color:#4caf50;
+.pure-menu-item .pure-menu-link {
+  color: var(--sienna-green);
+  font-size: 1.2rem;
+  transition: color 0.8s;
+}
+
+.pure-menu-item .pure-menu-link:hover {
+  color: var(--sienna-green-hover);
 }
 
 .home-menu .pure-menu-heading {
@@ -62,9 +65,6 @@
   color: white;
 }
 
-.home-menu a {
-  color: #6fbef3;
-}
 .home-menu li a:hover,
 .home-menu li a:focus {
   background: none;
@@ -79,8 +79,6 @@ nav span {
   top: -8px;
   width: 90px;
   height: 29px;
-  color: rgba(0,0,0,0);
+  color: rgba(0, 0, 0, 0);
 }
-
-
 </style>

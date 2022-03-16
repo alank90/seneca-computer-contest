@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@100;300;600&display=swap");
+
+:root {
+  --nav-bg: rgba(162, 222, 208, 1);
+  --body-bg: rgba(127, 140, 141, 1);
+  --app-text: rgba(44, 62, 80, 1);
+  --sienna-green: rgba(76, 175, 80, 1);
+  --sienna-green-hover: rgba(76, 175, 80, 0.5);
+  --sienna-yellow: rgba(255, 196, 35, 1);
+  --sienna-yellow-hover: rgba(255, 196, 35, 0.5);
+  --noto:"Noto Serif Display', serif";
+}
