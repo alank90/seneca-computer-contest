@@ -23,7 +23,7 @@
  */
 
 .home-menu {
-  padding: 0.5em;
+  padding: 0.5rem;
   text-align: left;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
@@ -55,8 +55,7 @@
 
 .home-menu .pure-menu-heading {
   color: white;
-  font-weight: 400;
-  font-size: 100%;
+  font: 600 1.2rem var(--noto);
   margin-left: 5px;
   text-transform: none;
 }
@@ -80,5 +79,6 @@ nav span {
   width: 90px;
   height: 29px;
   color: rgba(0, 0, 0, 0);
+  margin-right: 15px;
 }
 </style>
