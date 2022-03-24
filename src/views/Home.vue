@@ -43,25 +43,64 @@
         </div>
 
         <div class="pure-u-1-3">
-          <img
-            class="pure-img-responsive"
-            src="@/assets/images/card-2.jpg"
-            alt="Church"
-          />
-          <p class="card-description">Thirds</p>
+          <FrontPageCard :propCardInfo="cardInfo2">
+            <template #header> </template>
+
+            <template #description>
+              <p class="card-description">
+                {{ cardInfo2.description }}
+              </p>
+            </template>
+          </FrontPageCard>
         </div>
+
         <div class="pure-u-1-3">
-          <img
-            class="pure-img-responsive"
-            src="@/assets/images/card-3.jpg"
-            alt="Students"
-          />
-          <p>Thirds</p>
+          <FrontPageCard :propCardInfo="cardInfo3">
+            <template #header></template>
+
+            <template #description>
+              <p class="card-description">{{ cardInfo3.description }}</p>
+            </template>
+          </FrontPageCard>
         </div>
       </div>
     </div>
   </div>
 </template>
+
+<script setup>
+import FrontPageCard from "@/components/FrontPageCard.vue";
+
+const cardInfo1 = {
+  materialIcon: "calendar_today",
+  img: "src/assets/images/card-1.jpg",
+  alt: "Auditorium",
+  title: "Friday, April 8th 2022",
+  category: "WHEN?",
+  description:
+    "<p>Last Afternoon / Early Evening</p><p> Email <b>matthews@siena.edu</b> if you are interested in participating</p>",
+};
+
+const cardInfo2 = {
+  materialIcon: "location_on",
+  img: "src/assets/images/card-2.jpg",
+  alt: "School Picture",
+  title: "Siena College, Loudonville NY",
+  category: "WHERE?",
+  description:
+    "Siena's Computer Science Department has hosted the contest on campus since 1986.",
+};
+
+const cardInfo3 = {
+  materialIcon: "helper",
+  img: "src/assets/images/card-3.jpg",
+  alt: "Students",
+  title: "Fun & Excitement",
+  category: "WHY?",
+  description:
+    "Programming contests are competitive and fun with pizza, cookies and drinks provided.",
+};
+</script>
 
 <style scoped>
 @import "@/assets/css/card.css";
