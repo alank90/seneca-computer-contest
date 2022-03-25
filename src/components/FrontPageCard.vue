@@ -22,7 +22,9 @@
 
         <slot name="description">Default Material</slot>
 
-        <p><button class="pure-button btn btn-info">Details</button></p>
+        <slot name="button">
+          <button class="pure-button btn btn-info">Details</button>
+        </slot>
       </div>
     </div>
   </main>
@@ -30,13 +32,11 @@
 
 <script setup>
 import { defineProps } from "vue";
+import "@/assets/css/card.css";
+
 const props = defineProps({
   propCardInfo: {
     type: Object,
   },
 });
 </script>
-
-<style scoped>
-@import "@/assets/css/card.css";
-</style>

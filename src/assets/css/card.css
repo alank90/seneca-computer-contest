@@ -29,6 +29,7 @@
 .description,
 .card-description {
   color: rgb(70, 73, 73);
+  font-size: 14px;
 }
 
 .card .card-category {
@@ -40,6 +41,9 @@
   font-weight: normal;
   font-style: normal;
   font-size: 24px;
+  max-width: 29px;
+  height: auto;
+  margin-right: 3px;
   line-height: 1;
   letter-spacing: normal;
   text-transform: none;
@@ -52,8 +56,9 @@
   font-feature-settings: "liga";
 }
 
-.card .card-title {
+.card-title {
   margin-top: 0.625rem;
+  font-size: 1.2rem;
 }
 
 h6.card-category {
@@ -76,6 +81,7 @@ img[src*="card"] {
     rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
     rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
+
 .btn {
   position: relative;
   padding: 12px 30px;
@@ -99,11 +105,40 @@ img[src*="card"] {
 }
 
 .btn.btn-info {
+  display: inline-block;
   color: #fff;
   background-color: #00bcd4;
   border-color: #00bcd4;
   box-shadow: 0 2px 2px 0 rgba(0, 188, 212, 0.14),
     0 3px 1px -2px rgba(0, 188, 212, 0.2), 0 1px 5px 0 rgba(0, 188, 212, 0.12);
 }
+.btn.btn-info:hover {
+  box-shadow: 0 14px 26px -12px rgba(0, 188, 212, 0.42),
+    0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 188, 212, 0.2);
+}
 
+.btn.btn-success {
+  color: #fff;
+  background-color: #4caf50;
+  border-color: #4caf50;
+  box-shadow: 0 2px 2px 0 rgba(76, 175, 80, 0.14),
+    0 3px 1px -2px rgba(76, 175, 80, 0.2), 0 1px 5px 0 rgba(76, 175, 80, 0.12);
+}
+.btn.btn-success:hover {
+  box-shadow: 0 14px 26px -12px rgba(76, 175, 80, 0.42),
+    0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(76, 175, 80, 0.2);
+}
+
+.btn.btn-primary {
+  color: #fff;
+  background-color: #9c27b0;
+  border-color: #9c27b0;
+  box-shadow: 0 2px 2px 0 rgba(156, 39, 176, 0.14),
+    0 3px 1px -2px rgba(156, 39, 176, 0.2), 0 1px 5px 0 rgba(156, 39, 176, 0.12);
+}
+
+.btn.btn-primary:hover {
+  box-shadow: 0 14px 26px -12px rgba(156, 39, 176, 0.42),
+    0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(156, 39, 176, 0.2);
+}
 /* ========= End Card Stylings ======= */

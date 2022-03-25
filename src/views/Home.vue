@@ -21,25 +21,15 @@
 
       <div class="pure-g">
         <div class="pure-u-1-3">
-          <div class="card-header">
-            <img
-              class="pure-img-responsive"
-              src="@/assets/images/card-1.jpg"
-              alt="Auditorium"
-            />
-          </div>
-          <div class="card-body">
-            <h6 class="card-category text-info">
-              <i class="material-icons">calendar_today</i>When?
-            </h6>
-            <h4 class="card-title">Friday, April 8th 2022</h4>
-            <p class="card-description">Last Afternoon / Early Evening</p>
-            <p>
-              Email <b>matthews@siena.edu</b> if you are interested in
-              participating
-            </p>
-            <p><button class="pure-button btn btn-info">Details</button></p>
-          </div>
+          <FrontPageCard :propCardInfo="cardInfo1">
+            <template #header> </template>
+
+            <template #description>
+              <p class="card-description" v-html="cardInfo1.description"></p>
+            </template>
+
+            <template #button></template>
+          </FrontPageCard>
         </div>
 
         <div class="pure-u-1-3">
@@ -47,19 +37,28 @@
             <template #header> </template>
 
             <template #description>
-              <p class="card-description">
-                {{ cardInfo2.description }}
-              </p>
+              <p class="card-description" v-html="cardInfo2.description"></p>
             </template>
+
+            <template #button>
+              <p v-html="cardInfo2.button"></p>
+              <p v-html="cardInfo2.button"></p>
+            </template>
+            
           </FrontPageCard>
         </div>
 
         <div class="pure-u-1-3">
+         
           <FrontPageCard :propCardInfo="cardInfo3">
             <template #header></template>
 
             <template #description>
-              <p class="card-description">{{ cardInfo3.description }}</p>
+              <p class="card-description" v-html="cardInfo3.description"></p>
+            </template>
+
+            <template #button>
+              <p v-html="cardInfo3.button"></p>
             </template>
           </FrontPageCard>
         </div>
@@ -78,7 +77,8 @@ const cardInfo1 = {
   title: "Friday, April 8th 2022",
   category: "WHEN?",
   description:
-    "<p>Last Afternoon / Early Evening</p><p> Email <b>matthews@siena.edu</b> if you are interested in participating</p>",
+    "<p class='card-description'>Last Afternoon / Early Evening</p><p class='card-description'> Email <b>matthews@siena.edu</b> if you are interested in participating</p>",
+  button: "<button class='pure-button btn btn-success'>DETAILS</button>",
 };
 
 const cardInfo2 = {
@@ -88,7 +88,8 @@ const cardInfo2 = {
   title: "Siena College, Loudonville NY",
   category: "WHERE?",
   description:
-    "Siena's Computer Science Department has hosted the contest on campus since 1986.",
+    "<p class='card-description'>Siena's Computer Science Department has hosted the contest on campus since 1986.</p>",
+  button: "<button class='pure-button btn btn-success'>SIENNA EDU</button>",
 };
 
 const cardInfo3 = {
@@ -98,13 +99,12 @@ const cardInfo3 = {
   title: "Fun & Excitement",
   category: "WHY?",
   description:
-    "Programming contests are competitive and fun with pizza, cookies and drinks provided.",
+    "<p class='card-description'>Programming contests are competitive and fun with pizza, cookies and drinks provided.</p>",
+  button: "<p><button class='pure-button btn btn-primary'>PHOTOS</button></p>",
 };
 </script>
 
 <style scoped>
-@import "@/assets/css/card.css";
-
 h1,
 h2 {
   color: var(--sienna-yellow);
