@@ -23,7 +23,7 @@
         <slot name="description">Default Material</slot>
 
         <slot name="button">
-          <button class="pure-button btn btn-info">Details</button>
+          <button class="pure-button btn btn-info">DETAILS</button>
         </slot>
       </div>
     </div>

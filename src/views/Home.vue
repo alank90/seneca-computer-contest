@@ -41,15 +41,20 @@
             </template>
 
             <template #button>
-              <p v-html="cardInfo2.button"></p>
-              <p v-html="cardInfo2.button"></p>
+              <button class="pure-button btn btn-success">
+                {{ cardInfo2.button1 }}
+              </button>
+              <button
+                :style="{ marginLeft: cardInfo2.button2.marginLeft }"
+                class="pure-button btn btn-success"
+              >
+                {{ cardInfo2.button2.label }}
+              </button>
             </template>
-            
           </FrontPageCard>
         </div>
 
         <div class="pure-u-1-3">
-         
           <FrontPageCard :propCardInfo="cardInfo3">
             <template #header></template>
 
@@ -58,17 +63,21 @@
             </template>
 
             <template #button>
-              <p v-html="cardInfo3.button"></p>
+              <button class="pure-button btn btn-primary">PHOTOS</button>
             </template>
           </FrontPageCard>
         </div>
       </div>
+
+      <ContestDetails></ContestDetails>
     </div>
   </div>
 </template>
 
+
 <script setup>
 import FrontPageCard from "@/components/FrontPageCard.vue";
+import ContestDetails from "@/components/ContestDetails.vue";
 
 const cardInfo1 = {
   materialIcon: "calendar_today",
@@ -78,7 +87,6 @@ const cardInfo1 = {
   category: "WHEN?",
   description:
     "<p class='card-description'>Last Afternoon / Early Evening</p><p class='card-description'> Email <b>matthews@siena.edu</b> if you are interested in participating</p>",
-  button: "<button class='pure-button btn btn-success'>DETAILS</button>",
 };
 
 const cardInfo2 = {
@@ -89,7 +97,8 @@ const cardInfo2 = {
   category: "WHERE?",
   description:
     "<p class='card-description'>Siena's Computer Science Department has hosted the contest on campus since 1986.</p>",
-  button: "<button class='pure-button btn btn-success'>SIENNA EDU</button>",
+  button1: "SIENNA EDU",
+  button2: { label: "CS DEPT", marginLeft: 5 + "px" },
 };
 
 const cardInfo3 = {
@@ -100,7 +109,6 @@ const cardInfo3 = {
   category: "WHY?",
   description:
     "<p class='card-description'>Programming contests are competitive and fun with pizza, cookies and drinks provided.</p>",
-  button: "<p><button class='pure-button btn btn-primary'>PHOTOS</button></p>",
 };
 </script>
 
@@ -129,13 +137,17 @@ img[alt="Sienna logo"] {
   margin: 0 auto;
 }
 
+.main .pure-g {
+  margin-bottom: 100px;
+}
+
 /* Double .main to add specificity cheaply. */
 .main.main {
   background: #ffffff;
   position: relative;
   z-index: 3;
   margin-top: 30px;
-  background-color: #e6e9e6b6;
+  background-color: #fdfdfdda;
   padding: 0 50px;
 }
 
