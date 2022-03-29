@@ -70,15 +70,18 @@
       </div>
 
       <ContestDetails></ContestDetails>
+
+      <ContestNumbers></ContestNumbers>
     </div>
   </div>
 </template>
 
-
 <script setup>
 import FrontPageCard from "@/components/FrontPageCard.vue";
 import ContestDetails from "@/components/ContestDetails.vue";
+import ContestNumbers from "@/components/ContestNumbers.vue";
 
+// ======= Vars =================== //
 const cardInfo1 = {
   materialIcon: "calendar_today",
   img: "src/assets/images/card-1.jpg",
