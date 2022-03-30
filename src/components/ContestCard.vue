@@ -1,14 +1,28 @@
 <template>
-  <div class="card-container">
-    <h3 class="card-title">2</h3>
-    <h4 class="sub-title">DIVISIONS</h4>
-    <div class="icon"><i class="material-icons">view_stream</i></div>
+  <div
+    class="card-container"
+    :style="{ backgroundColor: props.propCardInfo.bgColor }"
+  >
+    <h3 class="card-title">{{ props.propCardInfo.title }}</h3>
+    <h4 class="sub-title">{{ props.propCardInfo.subtitle }}</h4>
+    <div class="icon">
+      <i class="material-icons">{{ props.propCardInfo.materialIcon }}</i>
+    </div>
   </div>
 </template>
 
+<script setup>
+import { defineProps } from "vue";
+
+const props = defineProps({
+  propCardInfo: {
+    type: Object,
+  },
+});
+</script>
+
 <style scoped>
 .card-container {
-  background-color: #069eaf;
   width: 100%;
   height: 300px;
   border-radius: 6px;
@@ -34,27 +48,24 @@
   border-color: rgba(255, 255, 255, 0.25);
   width: 130px;
   height: 130px;
+  margin: 20px auto;
   border-radius: 50%;
-  line-height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .material-icons {
   font-family: "Material Icons";
   font-weight: normal;
   font-style: normal;
-  font-size: 24px;
-  max-width: 29px;
-  height: auto;
-  margin-right: 3px;
+  font-size: 40px;
+  max-width: 50px;
   line-height: 1;
   letter-spacing: normal;
   text-transform: none;
-  display: inline-block;
   white-space: nowrap;
   word-wrap: normal;
   direction: ltr;
-  -moz-font-feature-settings: "liga";
-  -moz-osx-font-smoothing: grayscale;
-  font-feature-settings: "liga";
 }
 </style>
