@@ -1,9 +1,6 @@
 <template>
-  <div
-    class="card-container"
-    :style="{ backgroundColor: props.propCardInfo.bgColor }"
-  >
-    <h3 class="card-title">{{ props.propCardInfo.title }}</h3>
+  <div class="card-container">
+    <h3 class="card-title">{{ props.propCardTitle }}</h3>
     <h4 class="sub-title">{{ props.propCardInfo.subtitle }}</h4>
     <div class="icon">
       <i class="material-icons">{{ props.propCardInfo.materialIcon }}</i>
@@ -18,6 +15,9 @@ const props = defineProps({
   propCardInfo: {
     type: Object,
   },
+  propCardTitle: {
+    type: Number,
+  },
 });
 </script>
 
@@ -26,6 +26,7 @@ const props = defineProps({
   width: 100%;
   height: 300px;
   border-radius: 6px;
+  background-color: v-bind("props.propCardInfo.bgColor");
 }
 
 .card-title {
