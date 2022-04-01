@@ -1,14 +1,14 @@
 <template>
   <div class="home">
     <h1>Scarsdale Computer Club</h1>
-    <img
-      class="pure-img"
-      alt="Sienna logo"
-      src="@/assets/images/siena-logo-cs-white.png"
-    />
-    <h2>High School Programming Contest</h2>
+
     <div class="main main-raised">
       <div id="info" class="section">
+        <img
+          class="pure-img"
+          alt="Sienna logo"
+          src="@/assets/images/siena-logo-cs-white.png"
+        />
         <h2><span>Sienna College</span>High School Programming Contest</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
@@ -150,7 +150,7 @@ img[alt="Sienna logo"] {
   position: relative;
   z-index: 3;
   margin-top: 30px;
-  background-color: #fdfdfdda;
+  background-color: #1E3803da;
   padding: 0 50px;
 }
 
