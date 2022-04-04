@@ -1,9 +1,11 @@
 <template>
-  <nav class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+  <nav
+    ref="navbar"
+    class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed"
+  >
     <a class="pure-menu-heading" href=""
       ><span>Sienna</span>Programming Contest</a
     >
-
     <ul class="pure-menu-list">
       <li class="pure-menu-item pure menu-selected">
         <router-link class="pure-menu-link" to="/">Home</router-link>
@@ -16,6 +18,25 @@
   </nav>
 </template>
 
+<script setup>
+/* import { ref } from "vue";
+const observer = new IntersectionObserver(handleIntersection);
+
+const target = ref("navbar");
+observer.observe(target.value);
+console.log(target); */
+
+/* function handleIntersection(entries) {
+  entries.map((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("transition-nav");
+    } else {
+      entry.target.classList.remove("transition-nav");
+    }
+  });
+} */
+</script>
+
 <style scoped>
 /*
  * -- MENU STYLES --
@@ -23,14 +44,17 @@
  */
 
 .home-menu {
+  background: var(--nav-bg);
+  font-family: var(--noto);
   padding: 0.5rem;
   text-align: left;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
-.home-menu {
-  background: var(--nav-bg);
-  font-family: var(--noto);
+
+.transition-nav {
+  background-color: #fff;
 }
+
 .pure-menu.pure-menu-fixed {
   /* Fixed menus normally have a border at the bottom. */
   border-bottom: none;

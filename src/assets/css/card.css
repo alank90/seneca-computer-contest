@@ -42,7 +42,7 @@
   font-style: normal;
   font-size: 24px;
   max-width: 29px;
-  color: #000;
+  color: #BBE29B;
   height: auto;
   margin-right: 3px;
   line-height: 1;
@@ -71,7 +71,7 @@ h4 {
 }
 
 .text-info {
-  color: #05444B;
+  color: #A3D47B;
 }
 
 img[src*="card"] {

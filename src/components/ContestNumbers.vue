@@ -1,7 +1,7 @@
+<!-- eslint-disable vue/require-v-for-key -->
 <template>
   <div class="grid">
-    <!-- eslint-disable-next-line vue/no-v-for-template-key -->
-    <template v-for="n in 2">
+    <template v-for="n in 3">
       <h5 :class="numberSectionInfo[n - 1].titleClass">
         {{ numberSectionInfo[n - 1].title }}
       </h5>
@@ -12,25 +12,33 @@
       <div :class="numberSectionInfo[n - 1].cardInfo1.gridArea">
         <ContestCard
           :prop-card-info="numberSectionInfo[n - 1].cardInfo1"
-          :propCardTitle="cardTitle[1 + (numberSectionInfo[n - 1].id - 1) * 4]"
+          :propCardTitle="
+            cardTitle[1 + (numberSectionInfo[n - 1].id - 1) * 4 - 1]
+          "
         />
       </div>
       <div :class="numberSectionInfo[n - 1].cardInfo2.gridArea">
         <ContestCard
           :prop-card-info="numberSectionInfo[n - 1].cardInfo2"
-          :propCardTitle="cardTitle[2 + (numberSectionInfo[n - 1].id - 1) * 4]"
+          :propCardTitle="
+            cardTitle[2 + (numberSectionInfo[n - 1].id - 1) * 4 - 1]
+          "
         />
       </div>
       <div :class="numberSectionInfo[n - 1].cardInfo3.gridArea">
         <ContestCard
           :prop-card-info="numberSectionInfo[n - 1].cardInfo3"
-          :propCardTitle="cardTitle[3 + (numberSectionInfo[n - 1].id - 1) * 4]"
+          :propCardTitle="
+            cardTitle[3 + (numberSectionInfo[n - 1].id - 1) * 4 - 1]
+          "
         />
       </div>
       <div :class="numberSectionInfo[n - 1].cardInfo4.gridArea">
         <ContestCard
           :prop-card-info="numberSectionInfo[n - 1].cardInfo4"
-          :propCardTitle="cardTitle[4 + (numberSectionInfo[n - 1].id - 1) * 4]"
+          :propCardTitle="
+            cardTitle[4 + (numberSectionInfo[n - 1].id - 1) * 4 - 1]
+          "
         />
       </div>
     </template>
@@ -77,7 +85,7 @@ const numberSectionInfo = [
     id: 2,
     title: "2020 NUMBERS",
     titleClass: "main-title2",
-    subTitle:
+    subtitle:
       "Before the contest was cancelled due to COVID, the following had signed up...",
     subtitleClass: "sub-title2",
     cardInfo1: {
@@ -138,36 +146,6 @@ const numberSectionInfo = [
   }, // End Object
 ];
 
-/* const cardInfo1 = {
-  subtitle: "DIVISIONS",
-  materialIcon: "view_stream",
-  bgColor: "#069eaf",
-};
-
-const cardInfo2 = {
-  subtitle: "SCHOOLS",
-  materialIcon: "school",
-  bgColor: "#3f9543",
-};
-
-const cardInfo3 = {
-  subtitle: "TEAMS",
-  materialIcon: "people",
-  bgColor: "#ca2061",
-};
-
-const cardInfo4 = {
-  subtitle: "STUDENTS",
-  materialIcon: "emoji_people",
-  bgColor: "#9c3ab4",
-};
-
-const mainTitle = ["2021 Numbers", "2020 Numbers", "2019 Numbers"];
-const subTitle = [
-  "Virtual Only",
-  "Before the contest was cancelled due to COVID, the following had signed up...",
-  "",
-]; */
 const cardTitle = [2, 19, 60, 236, 2, 21, 80, 315, 2, 18, 59, 234];
 </script>
 
@@ -184,10 +162,10 @@ const cardTitle = [2, 19, 60, 236, 2, 21, 80, 315, 2, 18, 59, 234];
     "card1 card2 card3 card4"
     ". main2  main2 ."
     ". sub2  sub2 ."
-    "card5 card6 card7 card8";
-   /* ". main3  main3 ."
-    ". sub2  sub2 ."
-    "card9 card10 card11 card12" */
+    "card5 card6 card7 card8"
+    ". main3  main3 ."
+    ". sub3  sub3 ."
+    "card9 card10 card11 card12";
 }
 
 .main-title1 {
