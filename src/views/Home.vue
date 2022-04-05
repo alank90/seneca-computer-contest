@@ -123,12 +123,13 @@ h2 {
 }
 
 h2 {
-  margin-top: 15px;
+  margin: 25px 0;
 }
 
 h2 > span {
   display: block;
   color: var(--sienna-green);
+  margin-bottom: 5px;
 }
 
 h4 ~ p {
@@ -150,7 +151,7 @@ img[alt="Sienna logo"] {
   position: relative;
   z-index: 3;
   margin-top: 30px;
-  background-color: #1E3803da;
+  background-color: #1e3803da;
   padding: 0 50px;
 }
 

@@ -16,25 +16,42 @@
       </li>
     </ul>
   </nav>
+
+  <span ref="hiddenSpan"></span>
 </template>
 
 <script setup>
-/* import { ref } from "vue";
-const observer = new IntersectionObserver(handleIntersection);
+import { ref, onMounted } from "vue";
 
-const target = ref("navbar");
-observer.observe(target.value);
-console.log(target); */
+const navbar = ref(null);
+const hiddenSpan = ref(null);
 
-/* function handleIntersection(entries) {
-  entries.map((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("transition-nav");
-    } else {
-      entry.target.classList.remove("transition-nav");
-    }
+onMounted(() => {
+  const menuLinks = document.querySelectorAll(".pure-menu-link");
+  console.log(menuLinks);
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.intersectionRatio > 0 && navbar.value !== null) {
+        navbar.value.classList.remove("transition-nav-bgcolor");
+
+        // Iterate thru menu links to change text color back
+        menuLinks.forEach((item) => {
+          item.classList.add("menu-color1");
+          item.classList.remove("menu-color2");
+        });
+      } else if (navbar.value !== null) {
+        navbar.value.classList.add("transition-nav-bgcolor");
+
+        menuLinks.forEach((item) => {
+          item.classList.add("menu-color2");
+          item.classList.remove("menu-color1");
+        });
+      }
+    });
   });
-} */
+
+  observer.observe(hiddenSpan.value);
+});
 </script>
 
 <style scoped>
@@ -49,10 +66,32 @@ console.log(target); */
   padding: 0.5rem;
   text-align: left;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  transition: 0.5s background ease-in;
 }
 
-.transition-nav {
-  background-color: #fff;
+.home-menu.transition-nav-bgcolor {
+  background: rgba(162, 222, 208, 0.7);
+}
+
+.pure-menu-link {
+  font-size: 1.2rem;
+  transition: color 0.8s;
+}
+
+.menu-color1 {
+  color: var(--sienna-green);
+}
+
+.pure-menu-item .menu-color1:hover {
+  color: var(--sienna-green-hover);
+}
+
+.menu-color2 {
+  color: #fff;
+}
+
+.pure-menu-item .menu-color2:hover {
+  color: rgb(3, 68, 25);
 }
 
 .pure-menu.pure-menu-fixed {
@@ -65,16 +104,6 @@ console.log(target); */
 .pure-menu-list {
   position: absolute;
   right: 0;
-}
-
-.pure-menu-item .pure-menu-link {
-  color: var(--sienna-green);
-  font-size: 1.2rem;
-  transition: color 0.8s;
-}
-
-.pure-menu-item .pure-menu-link:hover {
-  color: var(--sienna-green-hover);
 }
 
 .home-menu .pure-menu-heading {
@@ -104,5 +133,10 @@ nav span {
   height: 29px;
   color: rgba(0, 0, 0, 0);
   margin-right: 15px;
+}
+
+span[ref="navbar"] {
+  width: 0;
+  height: 0;
 }
 </style>
