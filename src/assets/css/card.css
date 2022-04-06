@@ -11,38 +11,40 @@
     0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
-.card-blog {
-  margin-top: 60px;
+.card-title {
+  color: #fff;
+  padding-top: 40px;
+  font-size: 3rem;
+  font-weight: 700;
 }
 
-.card-plain {
-  background: transparent;
-  box-shadow: none;
+.sub-title {
+  color: #fff;
+  padding-top: 30px;
+  font-size: 1.1rem;
+  font-weight: 700;
 }
 
-.card-body {
-  -webkit-box-flex: 1;
-  padding: 1.25rem;
-  text-align: left;
-}
-
-.description,
-.card-description {
-  color: #65D90C;
-  font-size: 14px;
-}
-
-.card .card-category {
-  margin-top: 10px;
+.icon {
+  font-size: 55px;
+  border: 1px solid #e5e5e5;
+  border-color: rgba(255, 255, 255, 0.25);
+  width: 130px;
+  height: 130px;
+  margin: 20px auto;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .material-icons {
   font-family: "Material Icons";
   font-weight: normal;
   font-style: normal;
-  font-size: 24px;
-  max-width: 29px;
-  color: #BBE29B;
+  font-size: 48px;
+  max-width: 60px;
+  color: #000;
   height: auto;
   margin-right: 3px;
   line-height: 1;
@@ -71,7 +73,7 @@ h4 {
 }
 
 .text-info {
-  color: #A3D47B;
+  color: #a3d47b;
 }
 
 img[src*="card"] {

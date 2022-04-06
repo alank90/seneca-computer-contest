@@ -1,0 +1,192 @@
+<template>
+  <ul class="flexbox">
+    <li>
+      <a href="" class="draw-outline"
+        ><i class="material-icons">info</i>Details</a
+      >
+    </li>
+    <li>
+      <a href="" class="draw-outline"
+        ><i class="material-icons">insert_chart</i>2019 Numbers</a
+      >
+    </li>
+    <li>
+      <a href="" class="draw-outline"
+        ><i class="material-icons">photo_camera</i>Photos</a
+      >
+    </li>
+    <li>
+      <a href="" class="draw-outline"
+        ><i class="material-icons">star</i>Past Winners</a
+      >
+    </li>
+    <li>
+      <a href="" class="draw-outline"
+        ><i class="material-icons">folder</i>Past Problems</a
+      >
+    </li>
+  </ul>
+</template>
+
+<style scoped>
+.flexbox {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: baseline;
+  margin-top: 20px;
+}
+
+li {
+  margin: 0 25px;
+  padding: 20px;
+}
+
+a {
+  text-transform: uppercase;
+}
+
+i {
+  font-size: 1.6rem;
+}
+
+/* ========= Anchor stylings ======== */
+.draw-outline {
+  display: inline-block;
+  padding: 16px 28px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  position: relative;
+  transition: border-color 0.35s ease-in-out;
+  z-index: 1;
+}
+.draw-outline:before,
+.draw-outline:after {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  box-sizing: content-box;
+  z-index: -1;
+  transition: transform 0.25s ease-in-out;
+  padding-left: 2px;
+}
+.draw-outline:before {
+  top: -2px;
+  left: -2px;
+  border-top: 2px transparent solid;
+  border-right: 2px transparent solid;
+}
+.draw-outline:after {
+  bottom: -2px;
+  right: -2px;
+  border-bottom: 2px transparent solid;
+  border-left: 2px transparent solid;
+}
+.draw-outline:hover {
+  color: #4caf50;
+  transition: color 0.35s ease-in-out, border-color 0.35s ease-in-out;
+  border-color: black;
+  -webkit-animation: outline-reset 0.35s 1 forwards;
+  animation: outline-reset 0.35s 1 forwards;
+}
+.draw-outline:hover:before {
+  -webkit-animation: top-right-border 0.75s 1 0.35s forwards;
+  animation: top-right-border 0.75s 1 0.35s forwards;
+}
+.draw-outline:hover:after {
+  -webkit-animation: bottom-left-border 0.75s 1 1.1s forwards;
+  animation: bottom-left-border 0.75s 1 1.1s forwards;
+}
+.draw-outline--tandem:hover:after {
+  -webkit-animation: bottom-left-border 0.75s 1 0.35s forwards;
+  animation: bottom-left-border 0.75s 1 0.35s forwards;
+}
+.draw-outline:active:before,
+.draw-outline:active:after {
+  transform: scale(1.05);
+}
+
+@-webkit-keyframes outline-reset {
+  0% {
+    border-color: #c3efa1;
+  }
+  100% {
+    border-color: transparent;
+  }
+}
+
+@keyframes outline-reset {
+  0% {
+    border-color: #c3efa1;
+  }
+  100% {
+    border-color: transparent;
+  }
+}
+@-webkit-keyframes top-right-border {
+  0% {
+    border-color: #4caf50;
+    width: 0px;
+    height: 0;
+  }
+  50% {
+    width: 100%;
+    height: 0;
+  }
+  100% {
+    border-color: #4caf50;
+    width: 100%;
+    height: 100%;
+  }
+}
+@keyframes top-right-border {
+  0% {
+    border-color: #4caf50;
+    width: 0px;
+    height: 0;
+  }
+  50% {
+    width: 100%;
+    height: 0;
+  }
+  100% {
+    border-color: #4caf50;
+    width: 100%;
+    height: 100%;
+  }
+}
+@-webkit-keyframes bottom-left-border {
+  0% {
+    border-color: #4caf50;
+    width: 0px;
+    height: 0;
+  }
+  50% {
+    width: 100%;
+    height: 0;
+  }
+  100% {
+    border-color: #4caf50;
+    width: 100%;
+    height: 100%;
+  }
+}
+@keyframes bottom-left-border {
+  0% {
+    border-color: #4caf50;
+    width: 0px;
+    height: 0;
+  }
+  50% {
+    width: 100%;
+    height: 0;
+  }
+  100% {
+    border-color: #4caf50;
+    width: 100%;
+    height: 100%;
+  }
+}
+</style>
