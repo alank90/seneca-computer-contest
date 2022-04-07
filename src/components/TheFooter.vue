@@ -42,11 +42,12 @@ li {
   padding: 20px;
 }
 
-a {
+li a {
   text-transform: uppercase;
 }
 
 i {
+  transform: translateY(5px);
   font-size: 1.6rem;
 }
 

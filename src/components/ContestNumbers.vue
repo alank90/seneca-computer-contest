@@ -156,6 +156,7 @@ const cardTitle = [2, 19, 60, 236, 2, 21, 80, 315, 2, 18, 59, 234];
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: auto;
   max-width: 1200px;
+  margin: 0 auto;
   grid-template-areas:
     ". main1  main1 ."
     ". sub1  sub1 ."

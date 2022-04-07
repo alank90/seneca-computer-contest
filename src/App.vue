@@ -4,12 +4,14 @@
     <router-view></router-view>
   </div>
 
+  <TopOfPage />
   <TheFooter />
 </template>
 
 <script setup>
 import TheNavigation from "./components/TheNavigation.vue";
 import TheFooter from "@/components/TheFooter.vue";
+import TopOfPage from "@/components/TopOfPage.vue";
 </script>
 
 <style>
