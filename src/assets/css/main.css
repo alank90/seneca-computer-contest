@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@100;300;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@100;300;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Domine:wght@600;700&display=swap");
 
 :root {
   --nav-bg: rgba(162, 222, 208, 1);
@@ -8,5 +8,7 @@
   --sienna-green-hover: rgba(9, 87, 11, 0.819);
   --sienna-yellow: rgba(255, 196, 35, 1);
   --sienna-yellow-hover: rgba(255, 196, 35, 0.5);
-  --noto:"Noto Serif Display', serif";
+  --noto: "'Noto Serif Display', serif";
+  --playfair: "'Playfair Display', serif";
+  --domine: "'Domine', serif";
 }

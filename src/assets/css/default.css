@@ -49,6 +49,7 @@ body {
 /* Handling typography */
 h1 {
   font-size: 2.2rem;
+  font-family: var(--domine);
 }
 
 h2 {

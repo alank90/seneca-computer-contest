@@ -15,9 +15,13 @@
 .card-title {
   color: #fff;
   padding-top: 40px;
-  font-size: 2.5rem;
+  font-size: 1.6rem;
   font-weight: 700;
   font-family: var(--noto);
+}
+
+.card-description {
+  font-size: 1.1rem;
 }
 
 .sub-title {
@@ -44,7 +48,7 @@
   font-family: "Material Icons";
   font-weight: normal;
   font-style: normal;
-  font-size: 48px;
+  font-size: 38px;
   max-width: 60px;
   color: #000;
   height: auto;
@@ -61,6 +65,9 @@
   font-feature-settings: "liga";
 }
 
+h6>i.material-icons {
+  color: #cceeb1;
+}
 h6.card-category {
   font-size: 1.3rem;
 }

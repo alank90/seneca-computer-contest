@@ -28,7 +28,7 @@ const hiddenSpan = ref(null);
 
 onMounted(() => {
   const menuLinks = document.querySelectorAll(".pure-menu-link");
-  console.log(menuLinks);
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.intersectionRatio > 0 && navbar.value !== null) {

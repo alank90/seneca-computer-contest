@@ -74,9 +74,15 @@
       <ContestNumbers></ContestNumbers>
     </div>
   </div>
+
+  <TopOfPage />
+
+  <TheFooter />
 </template>
 
 <script setup>
+import TheFooter from "@/components/TheFooter.vue";
+import TopOfPage from "@/components/TopOfPage.vue";
 import FrontPageCard from "@/components/FrontPageCard.vue";
 import ContestDetails from "@/components/ContestDetails.vue";
 import ContestNumbers from "@/components/ContestNumbers.vue";
@@ -119,7 +125,7 @@ const cardInfo3 = {
 h1,
 h2 {
   color: var(--sienna-yellow);
-  font-family: var(--noto);
+  font-family: var(--domine);
 }
 
 h2 {
@@ -130,6 +136,10 @@ h2 > span {
   display: block;
   color: var(--sienna-green);
   margin-bottom: 5px;
+}
+
+p {
+  font-family: var(--playfair);
 }
 
 h4 ~ p {
